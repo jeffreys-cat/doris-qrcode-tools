@@ -1,11 +1,12 @@
 /** @type {import('prettier').Config} */
 module.exports = {
   endOfLine: "lf",
-  semi: false,
-  singleQuote: false,
-  tabWidth: 2,
+  semi: true,
+  singleQuote: true,
+  tabWidth: 4,
   trailingComma: "es5",
   importOrder: [
+    "^Licensed to the Apache Software Foundation (ASF)",
     "^(react/(.*)$)|^(react$)",
     "^(next/(.*)$)|^(next$)",
     "<THIRD_PARTY_MODULES>",

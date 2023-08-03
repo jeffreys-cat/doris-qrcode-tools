@@ -1,18 +1,17 @@
-export type SiteConfig = typeof siteConfig
+export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js",
-  description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
-  mainNav: [
-    {
-      title: "Home",
-      href: "/",
+    name: 'Doris Tools',
+    description:
+        'Doris Tools',
+    mainNav: [
+        // {
+        //     title: 'Home',
+        //     href: '/',
+        // },
+    ],
+    links: {
+        github: 'https://github.com/apache/doris',
+        docs: 'https://cn.selectdb.com/docs',
     },
-  ],
-  links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
-  },
-}
+};

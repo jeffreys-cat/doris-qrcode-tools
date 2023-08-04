@@ -50,12 +50,12 @@ export default function QRCodePlayer(props: QRCodePlayerProps) {
                     setStatus('done');
                     clearInterval(IntervalCount);
                 }
-            }, 600);
+            }, 100);
             setIntervalID(IntervalCount);
         });
     }
     return (
-        <div>
+        <div className="mx-auto">
             <>
                 <div style={{ fontWeight: 'bold', marginBottom: 16 }}>
                     <Space>
@@ -66,18 +66,20 @@ export default function QRCodePlayer(props: QRCodePlayerProps) {
                     </Space>
                 </div>
                 {playingText && (
-                    <Canvas
-                        text={playingText}
-                        options={{
-                            margin: 3,
-                            scale: 4,
-                            width: 500,
-                            color: {
-                                dark: '#000000',
-                                light: '#FFFFFF',
-                            },
-                        }}
-                    />
+                    <div style={{ marginLeft: -16 }}>
+                        <Canvas
+                            text={playingText}
+                            options={{
+                                margin: 3,
+                                scale: 4,
+                                width: 500,
+                                color: {
+                                    dark: '#000000',
+                                    light: '#FFFFFF',
+                                },
+                            }}
+                        />
+                    </div>
                 )}
                 {status === 'done' && (
                     <Space>

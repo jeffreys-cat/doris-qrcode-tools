@@ -4,6 +4,7 @@ const nextConfig = {
     // output: 'export',
     experimental: {
         appDir: true,
+        serverActions: true
     },
     // async rewrites() {
     //     return {

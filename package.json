@@ -13,6 +13,13 @@
     "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
+  "bin": "server.js",
+  "pkg": {
+    "assets": "['.next/dist/**/*.js']",
+    "scripts": "['.next/*/**']",
+    "targets": [ "node18-linux-arm64" ],
+    "outputPath": "dist"
+  },
   "dependencies": {
     "@ant-design/icons": "^5.2.4",
     "@emotion/css": "^11.11.0",

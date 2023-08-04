@@ -14,9 +14,9 @@ export default async function compressFile(formData: FormData) {
     });
 
     const data = fs.readFileSync('./tmp.gz');
-    const binaryString = data.toString('hex');
-    const base64Data = Buffer.from(binaryString);
-    const base64String = base64Data.toString('base64')
+    const hexString = data.toString('hex');
+    // const base64Data = Buffer.from(binaryString);
+    // const base64String = base64Data.toString('base64')
     // console.log(binaryString);
     // console.log(base64String);
     fs.unlink('./tmp.gz', (err) => {
@@ -26,5 +26,5 @@ export default async function compressFile(formData: FormData) {
             console.log('File deleted successfully.');
         }
     });
-    return base64String;
+    return hexString;
 }

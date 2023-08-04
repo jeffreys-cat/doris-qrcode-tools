@@ -47,20 +47,21 @@ export default function IndexPage() {
                             setFile(file)
                         }
                         onFileChange={async (info) => {
-                            console.log(info);
+                            setFile(info.file);
                             const formData = new FormData();
                             formData.set('file', info.file?.originFileObj!);
-                            setFile(info.file);
-                            if ((info.file.size as number) <= 102400000) {
-                                // setFile(info.file);
-                            } else {
-                                const formData = new FormData();
-                                const compressedText = await compressFile(
-                                    formData
-                                );
-                                console.log('compressedText', compressedText);
-                                setCompressedText(compressedText);
-                            }
+                            const compressedText = await compressFile(formData);
+                            setCompressedText(compressedText);
+                            // if ((info.file.size as number) <= 102400000) {
+                            //     // setFile(info.file);
+                            // } else {
+                            //     const formData = new FormData();
+                            //     const compressedText = await compressFile(
+                            //         formData
+                            //     );
+                            //     console.log('compressedText', compressedText);
+                            //     setCompressedText(compressedText);
+                            // }
                         }}
                     />
                     <QRCodeHelper

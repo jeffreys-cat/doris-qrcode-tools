@@ -65,7 +65,7 @@ export default function QRCodeHelper(props: QRCodeHelperProps) {
                             <Label htmlFor="r2">压缩</Label>
                         </div>
                     </RadioGroup>
-                    <div className="flex items-center space-x-2 mt-5">
+                    <div className="mt-5 flex items-center space-x-2">
                         <Checkbox
                             id="env"
                             checked={envConfirmed}

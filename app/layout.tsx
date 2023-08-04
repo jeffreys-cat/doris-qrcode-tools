@@ -41,7 +41,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <>
             <html lang="en" suppressHydrationWarning>
-                <head />
+                <head>
+                    <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1"
+                    />
+                    <meta charSet="utf-8" />
+                    <title>Doris QRCode Tools</title>
+                    <link
+                        rel="shortcut icon"
+                        href="./favicon.ico"
+                        // type="image/png"
+                    />
+                </head>
                 <body
                     className={cn(
                         'min-h-screen bg-background font-sans antialiased',

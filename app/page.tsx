@@ -66,12 +66,12 @@ export default function IndexPage() {
                     />
                     <QRCodeHelper
                         onFinish={async (values: any) => {
-                            console.log(values);
+                            // console.log(values);
                             if (values.type === 'text') {
                                 const localText = await getTextFromFile();
                                 setPlay({ status: 'playing', text: localText });
                             } else {
-                                console.log('compressedText', compressedText);
+                                // console.log('compressedText', compressedText);
                                 setPlay({
                                     status: 'playing',
                                     text: compressedText,
